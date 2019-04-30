@@ -9,17 +9,17 @@ class SearchBar extends React.Component {
         event.preventDefault();
 
         // In class based components, you reference props with 'this' keyword (this.props)
-        // onSubmit was passed on through the props object - which is pointing to the
+        // onSubmit is passed on through the props object - which is pointing to the
         // onSearchSubmit method in the App component
         this.props.onSubmit(this.state.term);
     }
-    // testing
+    
     render() {
         return (
             <div className="ui segment">
                 <form onSubmit={this.onFormSubmit} className="ui form">
                     <div>
-                        <label>Image</label>
+                        <label>Image Search</label>
                         <input  type="text"
                                 value={this.state.term}
                                 onChange={(e) => this.setState({ term: e.target.value })}/>
